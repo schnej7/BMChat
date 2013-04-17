@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BM Chat</string>
+    <string name="action_beep">Beep!</string>
+    <string name="action_quit">Quit</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="strSend">Send!</string>
+    <string name="strHint">Type your message here&#8230;</string>
+
+</resources>
