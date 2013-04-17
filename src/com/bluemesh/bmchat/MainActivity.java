@@ -64,9 +64,11 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View view) {
 				byte[] message = txtMessage.getText().toString().getBytes();
-				bms.write(message);
-				mHandler.obtainMessage(0, message.length, -1, message).sendToTarget();
-				txtMessage.setText("");
+				if(!txtMessage.getText().equals("")){
+					bms.write(message);
+					mHandler.obtainMessage(0, message.length, -1, message).sendToTarget();
+					txtMessage.setText("");
+				}
 			}
 		});
         mp = MediaPlayer.create(this, R.raw.beep);
