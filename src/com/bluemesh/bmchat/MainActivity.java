@@ -45,7 +45,6 @@ public class MainActivity extends Activity {
 			else{
 				messages.add(msgString);
 				adapter.notifyDataSetChanged();
-				txtMessage.setText("");
 			}
 		}
 	};
@@ -67,6 +66,7 @@ public class MainActivity extends Activity {
 				byte[] message = txtMessage.getText().toString().getBytes();
 				bms.write(message);
 				mHandler.obtainMessage(0, message.length, -1, message).sendToTarget();
+				txtMessage.setText("");
 			}
 		});
         mp = MediaPlayer.create(this, R.raw.beep);
